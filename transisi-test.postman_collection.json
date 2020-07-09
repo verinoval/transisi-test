@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "4da13cec-a6c7-4eae-a169-8b4b77e74c33",
+		"name": "transisi-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "emloyee",
+			"item": [
+				{
+					"name": "employee/get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2M1OWFhNTJhNjdiZTA5ZmZhM2FiYjQzZmQ5ZTJjZDBjMmYwYmZhNjY4MzUxNzAwMDkzYWUyOTlhMzQ2MjY1MWY4MThiYTM1MWQ2YzY4ZmMiLCJpYXQiOjE1OTQyMDk0ODMsIm5iZiI6MTU5NDIwOTQ4MywiZXhwIjoxNjI1NzQ1NDgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.II5oimoBor825THFEqPTiy2kS-w4v8uTnmEo8Jajo3YOOVywnGf2WPqtTLB2i8IiT1AZpQ5c6oAMsrR_Vhw9U_669IHe2xSbKXc_eKcNfU31RCgQjj8jA-OGUYDnviQOiVzwaJ6rCs2vyFC161Io2G5I6ByPjBsYlR-rbBcc_EJ7AS03S3CUTv9j3R6CQxiBsXipY5uBaxcthvOHdspuizVByb1zWxhOoVU8Y9tzRylnIIgSScgAQ7So1ISJllafdPXJ2urmh7R5smfS4unkYGCikgkdTZNbkHYfkEHL1mS0WVRjJFb6JBJSIFz3b1kvCwasKMOlMKgDgbe9AXSw26L28xYg9FpN97-bDbQL5UkNkkb32Y18x0rxUlp4OdKV0wntcqJFBdXok6j2rGSXZnx0B9MaghXJ7yF1aQP2AzYqDxFhcIgbBSSlnqzR9zzboSEBxWMSvez48TapQ3UZXtWQouEgxWi7F7pi_m_MUp3c2NYWaXit8ijtCNQK4idLkcifE4zr6ozlyjGwqraxOl1I2I-72AE_-hJzg8vEbLC8ongNDCxdNYu3UR9bCufMrhWvfzREd4NwPBjcpZw1_LGZwfO0mBJWowfqEvdMZj5h3V3sCtl0mRu49yEdwmGUqsGGRdIo_eYpatJ3m6FY9RCR-WP5vegc4rwUV9PI6ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "keyword",
+									"value": "1708763",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "jabatan",
+									"value": "teknisi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/get",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee/detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2M1OWFhNTJhNjdiZTA5ZmZhM2FiYjQzZmQ5ZTJjZDBjMmYwYmZhNjY4MzUxNzAwMDkzYWUyOTlhMzQ2MjY1MWY4MThiYTM1MWQ2YzY4ZmMiLCJpYXQiOjE1OTQyMDk0ODMsIm5iZiI6MTU5NDIwOTQ4MywiZXhwIjoxNjI1NzQ1NDgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.II5oimoBor825THFEqPTiy2kS-w4v8uTnmEo8Jajo3YOOVywnGf2WPqtTLB2i8IiT1AZpQ5c6oAMsrR_Vhw9U_669IHe2xSbKXc_eKcNfU31RCgQjj8jA-OGUYDnviQOiVzwaJ6rCs2vyFC161Io2G5I6ByPjBsYlR-rbBcc_EJ7AS03S3CUTv9j3R6CQxiBsXipY5uBaxcthvOHdspuizVByb1zWxhOoVU8Y9tzRylnIIgSScgAQ7So1ISJllafdPXJ2urmh7R5smfS4unkYGCikgkdTZNbkHYfkEHL1mS0WVRjJFb6JBJSIFz3b1kvCwasKMOlMKgDgbe9AXSw26L28xYg9FpN97-bDbQL5UkNkkb32Y18x0rxUlp4OdKV0wntcqJFBdXok6j2rGSXZnx0B9MaghXJ7yF1aQP2AzYqDxFhcIgbBSSlnqzR9zzboSEBxWMSvez48TapQ3UZXtWQouEgxWi7F7pi_m_MUp3c2NYWaXit8ijtCNQK4idLkcifE4zr6ozlyjGwqraxOl1I2I-72AE_-hJzg8vEbLC8ongNDCxdNYu3UR9bCufMrhWvfzREd4NwPBjcpZw1_LGZwfO0mBJWowfqEvdMZj5h3V3sCtl0mRu49yEdwmGUqsGGRdIo_eYpatJ3m6FY9RCR-WP5vegc4rwUV9PI6ic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "keyword",
+									"value": "1708763",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "jabatan",
+									"value": "teknisi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDE3YTcyY2ZjMWJmNmJmOWNhYTI4Nzk5NjViN2VmZWZkZTlkNWRiZDUyNjA0OTgyMDlkMmYwNzc4MWEzZGU1NjYyMjc3YzA0MGU3YzdkNjciLCJpYXQiOjE1OTQyNzkzMTIsIm5iZiI6MTU5NDI3OTMxMiwiZXhwIjoxNjI1ODE1MzExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.qHcyCbXuFiRS9_I8pMaZCfABqpT-T1eYmJF6PALx7GbVkMsiZR7qrXb2XqM0tVwsIQB1i8BeV49SkXF2C4WUUPktHeBNwjX4I7iJ7IIfVWsBywm5ogftnVaA-ao5ePCfThGmANXSvvHek88fcjkIOWdoCjvELPMf90030Zi5Hkf0WcNLVo9E86G-UelI5koGd_8hVY-0mF8nsTcuanmaxRkVvP99ZbAFcvDllzGaTZ3guyLxQpheeoeajZmGwvG_B8tUCZis7jk5K5Q_cvXWdtyr0UAb0VdDmBqNBjpop3kr7yvRsm_iI5Nrr_V5M3tcTx3ezMFoF_hH79_8mD3pv7EBEWQjfd3AN_eStOw7R5F_cMbReIYQY4TEP6OFesS9C9wizOS26rfC3BHxzmx0nxrhLi6T2aIeFtdnzad016T8-tCfYNwkNu1_1Qaawe9CtifjdoqvmzeBwjZPVbV-X6QwyKJgV378rCMMtAx329wWbMFYWb0H4Qp6Odiu_TDc13uORQaMQN8P2yu8S0uPqcyvJYyS7ykYWHLZG7hcFqV8aRsy-STT9PcYMLpfyltKxq1S8JMY7cfv2A0HcaacTb4KLmFsH2KO8fnsLVnweE7Sk64aC7pRlCREpe95aae3VREE7cQrkIMQkG1gAjVMOy63x0KbFTPE4t98544eTH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employee_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "jabatan_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "employee_salary",
+									"value": "2000000",
+									"type": "text"
+								},
+								{
+									"key": "employee_age",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDE3YTcyY2ZjMWJmNmJmOWNhYTI4Nzk5NjViN2VmZWZkZTlkNWRiZDUyNjA0OTgyMDlkMmYwNzc4MWEzZGU1NjYyMjc3YzA0MGU3YzdkNjciLCJpYXQiOjE1OTQyNzkzMTIsIm5iZiI6MTU5NDI3OTMxMiwiZXhwIjoxNjI1ODE1MzExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.qHcyCbXuFiRS9_I8pMaZCfABqpT-T1eYmJF6PALx7GbVkMsiZR7qrXb2XqM0tVwsIQB1i8BeV49SkXF2C4WUUPktHeBNwjX4I7iJ7IIfVWsBywm5ogftnVaA-ao5ePCfThGmANXSvvHek88fcjkIOWdoCjvELPMf90030Zi5Hkf0WcNLVo9E86G-UelI5koGd_8hVY-0mF8nsTcuanmaxRkVvP99ZbAFcvDllzGaTZ3guyLxQpheeoeajZmGwvG_B8tUCZis7jk5K5Q_cvXWdtyr0UAb0VdDmBqNBjpop3kr7yvRsm_iI5Nrr_V5M3tcTx3ezMFoF_hH79_8mD3pv7EBEWQjfd3AN_eStOw7R5F_cMbReIYQY4TEP6OFesS9C9wizOS26rfC3BHxzmx0nxrhLi6T2aIeFtdnzad016T8-tCfYNwkNu1_1Qaawe9CtifjdoqvmzeBwjZPVbV-X6QwyKJgV378rCMMtAx329wWbMFYWb0H4Qp6Odiu_TDc13uORQaMQN8P2yu8S0uPqcyvJYyS7ykYWHLZG7hcFqV8aRsy-STT9PcYMLpfyltKxq1S8JMY7cfv2A0HcaacTb4KLmFsH2KO8fnsLVnweE7Sk64aC7pRlCREpe95aae3VREE7cQrkIMQkG1gAjVMOy63x0KbFTPE4t98544eTH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/delete/16",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"delete",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDE3YTcyY2ZjMWJmNmJmOWNhYTI4Nzk5NjViN2VmZWZkZTlkNWRiZDUyNjA0OTgyMDlkMmYwNzc4MWEzZGU1NjYyMjc3YzA0MGU3YzdkNjciLCJpYXQiOjE1OTQyNzkzMTIsIm5iZiI6MTU5NDI3OTMxMiwiZXhwIjoxNjI1ODE1MzExLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.qHcyCbXuFiRS9_I8pMaZCfABqpT-T1eYmJF6PALx7GbVkMsiZR7qrXb2XqM0tVwsIQB1i8BeV49SkXF2C4WUUPktHeBNwjX4I7iJ7IIfVWsBywm5ogftnVaA-ao5ePCfThGmANXSvvHek88fcjkIOWdoCjvELPMf90030Zi5Hkf0WcNLVo9E86G-UelI5koGd_8hVY-0mF8nsTcuanmaxRkVvP99ZbAFcvDllzGaTZ3guyLxQpheeoeajZmGwvG_B8tUCZis7jk5K5Q_cvXWdtyr0UAb0VdDmBqNBjpop3kr7yvRsm_iI5Nrr_V5M3tcTx3ezMFoF_hH79_8mD3pv7EBEWQjfd3AN_eStOw7R5F_cMbReIYQY4TEP6OFesS9C9wizOS26rfC3BHxzmx0nxrhLi6T2aIeFtdnzad016T8-tCfYNwkNu1_1Qaawe9CtifjdoqvmzeBwjZPVbV-X6QwyKJgV378rCMMtAx329wWbMFYWb0H4Qp6Odiu_TDc13uORQaMQN8P2yu8S0uPqcyvJYyS7ykYWHLZG7hcFqV8aRsy-STT9PcYMLpfyltKxq1S8JMY7cfv2A0HcaacTb4KLmFsH2KO8fnsLVnweE7Sk64aC7pRlCREpe95aae3VREE7cQrkIMQkG1gAjVMOy63x0KbFTPE4t98544eTH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "form[employee_name]",
+									"value": "leomord",
+									"type": "text"
+								},
+								{
+									"key": "form[employee_age]",
+									"value": "gdgeg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "form[employee_salary]",
+									"value": "3000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/employee/update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "verry noval kristanto",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "verry@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "verry",
+							"type": "text"
+						},
+						{
+							"key": "level_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "verry",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDczZDdjODFhOTg1MjgxYTczOGM2NDNiYjg2NWNlMTNjNjIxODU0OGFjNzNhNzAyZDg0MGNhMWM1MDUyMzQzOWJkNGY3MGNlZjgwMmZiNjgiLCJpYXQiOjE1OTQyNzY5MjIsIm5iZiI6MTU5NDI3NjkyMiwiZXhwIjoxNjI1ODEyOTIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.QNuzIHxDTtMznayxr4JpKe0SXGatX3x2NKEEpUwoamVkiHD9cGn464q7JpUTqu4T2BNG-y2Lfa1YSRA8RBylEG1ryFC5Rhczh-r3E1s1wfNyYZYv9w7Wn4M8bzZ3mDE47iQFQ_x55MD1Li0BffyNVgNKWZyxLzG3ZkK7OekDFwkWPyDvy0-S6_dZJcjMapz3B8TyOo6rwsAq4deuQfA4It9XxYgI09OYLRAaDZYGtLwJzQz44bmQGCLRUxYjIu2tUehMkMhr7qlg3PB3ynaqcSDjutfYy5pAuzbtq3O_35l-9ULM0xLlQTQYBgkRNW4ih_OEjP1gWpbtrLbVcafS0R6oiDvH0CowChUyvocF25ecjZXMYQfFo0dv4GZzqO8XCgZAZ6yp47MQNYs59Lcgimjb24iFlP5WA3iBqQ9c3q4yXlRo_WjXBxewgVmD7Yi3saxbLzzQ7HI0m475ZQwl3rblpm0VY2gl_AQENed1yq--XVJzQC07uPqicNTm67eW-TupR9VItrd-RGWYCZ5JUgN31l0UUvVI3I5Jhs9sf9N5P7mOhJ_j70g9YvwjLiXQO8GM1aBX0F36lYyx_ot0ho0sFa43QWl57yU307Id57MBcEcoWTRbTGEYUzFxxozhBTAIP_Nj9OftOThzHmmwvhEz2T4z8ByJ4D9hL-HR9BI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8000/api/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
