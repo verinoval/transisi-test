@@ -23,9 +23,14 @@ class AuthController extends Controller
 
         $messages = [
             'name.required'         => 'Nama harus diisi!',
+            'name.string'           => 'Format nama salah!',
             'level_id.required'     => 'Level harus diisi!',
             'email.required'        => 'Email harus diisi!',
+            'email.string'          => 'Format email salah!',
+            'email.email'           => 'Format email salah!',
+            'email.unique'          => 'Email sudah didaftarkan!',
             'password.required'     => 'Password harus diisi!',
+            'password.string'       => 'Format password salah!',
             'password.confirmed'    => 'Konfirmasi password salah!'
         ];
         
@@ -39,7 +44,7 @@ class AuthController extends Controller
 
         $user = new User([
             'name'      => $request->name,
-            'level_id'  => $request->level,
+            'level_id'  => $request->level_id,
             'email'     => $request->email,
             'password'  => bcrypt($request->password)
         ]);
@@ -54,7 +59,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $input = $request->all();
+        $inputs = $request->all();
         $rules = [
             'email'         => 'required|string|email',
             'password'      => 'required|string',
@@ -62,10 +67,11 @@ class AuthController extends Controller
         ];
 
         $messages = [
-          'email.required'  => 'Email harus diisi!',
-          'email.string'    => 'Format email salah!',
-          'email.email'     => 'Email tidak terdaftar',
-          'password.required' => 'Password harus diisi!',
+            'email.required'    => 'Email harus diisi!',
+            'email.string'      => 'Format email salah!',
+            'email.email'       => 'Email tidak terdaftar!',
+            'password.required' => 'Password harus diisi!',
+            'password.string'   => 'Format password salah!'
         ];
 
         $validator = Validator::make($inputs,$rules,$messages);

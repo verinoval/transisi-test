@@ -27,5 +27,9 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     Route::group(['prefix' => 'employee'], function () {
         Route::post('get', 'EmployeesController@index');
+        Route::get('/{id}', 'EmployeesController@employee_detail');
+        Route::post('create', 'EmployeesController@employee_add');
+        Route::put('update/{id}', 'EmployeesController@employee_update');
+        Route::delete('delete/{id}', 'EmployeesController@employee_delete');
     });
 });

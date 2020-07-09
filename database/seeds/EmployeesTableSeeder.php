@@ -19,14 +19,29 @@ class EmployeesTableSeeder extends Seeder
  
     	for($i = 1; $i <= 5; $i++){
  
-    	      // insert data ke table pegawai menggunakan Faker
-    		Employees::create([
-                'employee_name'  => $faker->name,
-                'employee_salary' => $faker->numberBetween(1000000,5000000),
-                'employee_age'  => $faker->numberBetween(25,40),
-                'profile_image' => ''
+    	    Employees::create([
+                'jabatan_id'        => '1',
+                'employee_name'     => $faker->name,
+                'employee_salary'   => $faker->numberBetween(1000000,5000000),
+                'employee_age'      => $faker->numberBetween(25,40),
+                'profile_image'     => ''
     		]);
  
+            Employees::create([
+                'jabatan_id'        => '2',
+                'employee_name'     => $faker->name,
+                'employee_salary'   => $faker->numberBetween(1000000,5000000),
+                'employee_age'      => $faker->numberBetween(25,40),
+                'profile_image'     => ''
+            ]);
+            
+            Employees::create([
+                'jabatan_id'        => '3',
+                'employee_name'     => $faker->name,
+                'employee_salary'   => $faker->numberBetween(1000000,5000000),
+                'employee_age'      => $faker->numberBetween(25,40),
+                'profile_image'     => ''
+    		]);
     	}
     }
 }
